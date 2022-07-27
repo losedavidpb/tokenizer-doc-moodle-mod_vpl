@@ -11,6 +11,12 @@ language. The software is licenced under `GNU GPL3`_ and its code is available a
 .. _GNU GPL3: https://www.gnu.org/licenses/gpl-3.0-standalone.html
 .. _Github: https://github.com/losedavidpb/moodle-mod_vpl/tree/v3.5.0++
 
-.. note::
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents
 
-   This project is under active development
+   introduction
+   installation
+   tokenizer_rules
+   languages_supported
+   release_notes

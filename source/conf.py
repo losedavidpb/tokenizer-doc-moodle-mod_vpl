@@ -22,12 +22,12 @@ project_copyright = copyright
 
 # The major project version, used as the replacement for |version|.
 # Please note that release version may differ from version value.
-version = '1.0.0'
+version = '3.5.0++ - 5.1.4'
 
 # The full project version, used as the replacement for |release|.
 # If you don’t need the separation provided between version and release,
 # just set them both to the same value.
-release = '1.0.0'
+release = '3.5.0++ - 5.1.4'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
