@@ -1,20 +1,16 @@
-.. tokenizer-doc_vpl documentation master file, created by
-   sphinx-quickstart on Wed Jul 27 10:41:10 2022.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+Virtual Programming Lab for Moodle (VPL) Tokenizer
+==================================================
 
-Welcome to tokenizer-doc_vpl's documentation!
-=============================================
+This is the manual for the Virtual Programming Lab for Moodle (VPL) Tokenizer tool.
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+VPL Tokenizer is the easy way to create lexers at VPL for Moodle for every single
+programming language. Its accesibility and interface allows to developers to include
+new lexical analyzers defining a set of rules at a JSON file for all the tokens of a
+language. The software is licenced under `GNU GPL3`_ and its code is available at `GitHub`_.
 
+.. _GNU GPL3: https://www.gnu.org/licenses/gpl-3.0-standalone.html
+.. _Github: https://github.com/losedavidpb/moodle-mod_vpl/tree/v3.5.0++
 
+.. note::
 
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   This project is under active development

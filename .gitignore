@@ -1,6 +1,12 @@
-# sphinx build folder
-_build
+# Sphinx build folder #
+#######################
 build
+_build
+
+# Virtual environment #
+#######################
+.venv
+_venv
 
 # Compiled source #
 ###################
