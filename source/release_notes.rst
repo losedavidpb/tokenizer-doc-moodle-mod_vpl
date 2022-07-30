@@ -1,4 +1,4 @@
-5. Release notes
+4. Release notes
 ================
 
 This is a copy of the Changelog of VPL tokenizer.

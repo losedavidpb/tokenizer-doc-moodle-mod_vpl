@@ -16,7 +16,6 @@ language. The software is licenced under `GNU GPL3`_ and its code is available a
    :caption: Contents
 
    introduction
-   installation
    tokenizer_rules
    languages_supported
    release_notes

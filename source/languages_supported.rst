@@ -1,4 +1,4 @@
-4. Languages supported
+3. Languages supported
 ======================
 
 This is a section that contains a list of the programming languages

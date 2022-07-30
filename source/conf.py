@@ -139,3 +139,6 @@ html_show_sphinx = False
 
 # Output is processed with HTML4 writer. Default is False.
 html4_writer = True
+
+# Set style to have colorful code examples
+pygments_style = 'sphinx'
