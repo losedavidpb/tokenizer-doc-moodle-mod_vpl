@@ -1,4 +1,4 @@
-2. Tokenizer Rules
+2. Tokenizer rules
 ==================
 
 This chapter is intended for teachers who want to include at **VPL Tokenizer** new programming languages

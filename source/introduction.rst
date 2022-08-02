@@ -1,38 +1,69 @@
 1. Introduction
 ===============
 
-This section will have basic information about the tokenizer.
+The Virtual Programming Lab for Moodle (VPL) Tokenizer (VPLT) is a tool of VPL
+to generate lexical analyzers for programming languages in an easy way.
+VPLT is licenced under `GNU GPL3`_.
 
-1.1. Features
--------------
+.. _GNU GPL3: https://www.gnu.org/licenses/gpl-3.0-standalone.html
 
-A list of features would be included at this subsection.
+Its main features are:
 
-1.2. Objectives
+* Compatibility with similarity search feature
+* Interface to include lexical analyzers
+* Support for old VPL tokenizers
+* Easy and quick customization
+
+This program is based on the tokenizer of the `Ace Editor <https://ace.c9.io/>`_.
+If you are interested, here there is a `link`_ of the source file of Ace with
+the implementation of the tokenizer.
+
+.. _link: https://github.com/ajaxorg/ace/blob/master/lib/ace/tokenizer.js
+
+1.1. Objectives
 ---------------
 
-Here they will be written all the objectives that were considered
-to get during the implementation of the tokenizer.
+Before VPL Tokenizer, the lexical analyzers used at VPL for similarity search
+were based on specific automata for each programming language. This was a big
+limitation for scalability, since developers have to spend a lot of time and
+effort to just include support for a single language.
 
-This subsection will cover all the stuff related to the
-reasons of creating a new version for tokenizers, as well
-as the main objectives of the project.
+The main objective of VPLT is to provide to teachers and developers a simpler
+and more realiable way to create lexical analyzers with just the creation of
+a JSON file that contains a set of rules and states for the automata.
 
-1.3. Requirements
+1.2. Requirements
 -----------------
 
-To use VPL Tokenizer with the expected functionality, the system where you
-install VPL must fulfill the following requirements.
+To use VPL Tokenizer with the expected functionality, you must install
+VPL fulfilling the following requirements:
 
-* Moodle 3.6 or higher
-* PHP 7.3.0 or higher
+* Moodle 4.0 or higher
+* PHP 7.4.3 or higher
 * Modern browsers
 
-Since VPL Tokenizer is just an internal tool of VPL, you can get more information
-at `VPL manual <https://vpl.dis.ulpgc.es/documentation/vpl-3.4.3+/installation.html#requirements>`_.
+For more information about VPL installation, go to the official `VPL manual`_.
 
-1.4. Limitations
+.. _VPL manual: https://vpl.dis.ulpgc.es/documentation/vpl-3.4.3+/installation.html#requirements
+
+1.3. Limitations
 ----------------
 
-List of restrictions and limitations that should be considered
-before using VPL Tokenizer.
+Before using VPL Tokenizer, you must consider the following limitations:
+
+* It is not possible to define anonymous rules or states
+* Tokenizers' name must follow the format ``<namelang>-tokenizer``
+* There is any way to ignore states or rules during inheritance
+* It could happen that a tokenizer provokes an infinite loop
+
+1.4. Other uses
+---------------
+
+Although VPL Tokenizer is mainly intended for similarity search, it could have
+other uses. Here is a list with some of those uses.
+
+* To generate the lexer of a compiler
+* Syntax highlighting for code editors
+* Evaluation of the quality of the code of a source file
+* Classification of words, analysis, clustering
+* Spelling or Grammar Checking
