@@ -3,7 +3,7 @@
 ![VPL Logo](https://vpl.dis.ulpgc.es/images/logo2.png)
 
 VPL Tokenizer (VPLT) is the modern and easy way to generate lexical
-analyzers for every single programming language.
+analyzers for programming languages.
 
 This repository contains the source code of the documentation of VPLT.<br>
 On future releases of VPL, this manual would be published at the
