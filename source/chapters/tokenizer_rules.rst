@@ -1,16 +1,16 @@
-2. Tokenizer rules
-==================
+Tokenizer rules
+===============
 
 This chapter is intended for teachers who want to include at **VPL Tokenizer** new programming languages
-or edit the existed ones. Teachers here will see how to create or edit tokenizer rules files and how to
+or edit the existing ones. Teachers here will see how to create or edit tokenizer rules files and how to
 add them to the **VPL module**.
 
-2.1. Introduction
------------------
+Introduction
+------------
 
-**VPL Tokenizer** generates lexical analyzers by a list of rules stored at a JSON file.
-These files are called *tokenizer rules files*, and provides to teachers a interface to
-define the way tokenizer would understand each token.
+**VPL Tokenizer** generates lexical analyzers by a list of rules stored in a JSON file.
+These files are called *tokenizer rules files*, and provide teachers an interface to
+define the way tokenizers would understand each token.
 
 Tokenizer rules files are JSON files whose name must end as *tokenizer_rules.json*.
 These special files could include C-style comments and are used not only to declare
@@ -36,27 +36,27 @@ the rules, but also to customize or configure the tokenizer.
 .. note::
 
    It is recommended to name the tokenizer rules files using the language's name.
-   For example, for C language, name would be "c_tokenizer_rules.json".
+   For example, for C language, the name would be "c_tokenizer_rules.json".
 
-2.2. Structure
---------------
+Structure
+---------
 
 Tokenizer rules files are declared using different options. These settings
 customize the tokenizer's behaviour, its states and rules, and so on. Since
-there are a great list of options, we have organized them according to its
-accesibility (if could be used outside) and requirement (if its optional).
+there is a great list of options, we have organized them according to their
+accessibility (if could be used outside) and requirement (if it is optional).
 
 - **General options:** settings associated with the programming language, tokens,
   the generated lexical analyzer, etc. These options are divided into three groups:
 
-  - **Private options:** configuration would only affects to current tokenizer, and
-    is not take into account during the creation of other tokenizers.
+  - **Private options:** configuration would only affect to current tokenizer, and
+    is not taken into account during the creation of other tokenizers.
 
-  - **Inheritable options:** configuration which would be used by another tokenizer by inheritance.
-    These means that a tokenizer which inherits another one would include or update these options on itself.
+  - **Inheritable options:** the configuration which would be used by another tokenizer by inheritance.
+    This means that a tokenizer that inherits another one would include or update these options on itself.
 
   - **States option:** required option which contains a list of the states, each of them indexed by its name,
-    which are used to generate a lexical analyzer. This attribute must always exists and could not be empty.
+    which is used to generate a lexical analyzer. This attribute must always exist and could not be empty.
 
 - **Rule options:** customization for each rule located at a state. These options define a token,
   or manipulate the current or next state to process.
@@ -80,14 +80,14 @@ a rule, which means that are inside a state that is located at the states option
       }
    }
 
-2.3. Behaviour
---------------
+Behaviour
+---------
 
-This subsection gives information about the behaviour of the VPL Tokenizer
-during the creation of a lexical analyzer and the execution of it.
+This subsection gives information about the behavior of the VPL Tokenizer
+during the creation of a lexical analyzer and its execution.
 
-2.3.1. Preparation
-^^^^^^^^^^^^^^^^^^
+Preparation
+^^^^^^^^^^^
 
 During the generation of a lexical analyzer, VPL Tokenizer would
 initialize each option following a list of instructions which
@@ -95,9 +95,9 @@ are shown here.
 
 .. note::
 
-   The order options are declared at the tokenizer rules file does
-   not affect the way tokenizer is initialized, so you have freedom
-   to decide where to put each available option.
+   The order options declared in the tokenizer rules file do
+   not affect the way tokenizer is initialized, so you have the
+   freedom to decide where to put each available option.
 
 1. Check JSON file discarding all the comments
 2. Init check_rules to discard possible future checks
@@ -106,16 +106,16 @@ are shown here.
 5. Prepare the rest of options except states
 6. Init states option considering inheritance
 
-2.3.2. Parse
-^^^^^^^^^^^^
+Parse
+^^^^^
 
-VPL Tokenizer uses a top-bottom method during the search of a token.
-This means that tokenizer starts at a state, and will continue to the
-closest rule which is below current one until search finishes. When token
-was found, the next state to search would be the current one or the one
+VPL Tokenizer uses a top-bottom method during the search for a token.
+This means that the tokenizer starts at a state, and will continue to the
+closest rule which is below the current one until the search finishes. When
+token was found, the next state to search would be the current one or the one
 declared at "next".
 
-.. image:: _static/parse_diagram.png
+.. image:: ../images/tokenizer_rules/tokenization.png
    :align: center
 
 .. note::
@@ -123,8 +123,8 @@ declared at "next".
    The previous explanation does not consider advanced cases such as
    use "default_token" option, or "next" without "token" and "regex".
 
-2.4. Options
-------------
+Options
+-------
 
 This subsection shows information for each option supported by VPL Tokenizer.
 For each option type, a table with the features, as indicated in the next table,
@@ -135,8 +135,8 @@ is shown, as well as an explanation for each option.
 
    "Option's Name", "Yes/No", "Yes/No", "Data Type"
 
-2.4.1. General Options
-^^^^^^^^^^^^^^^^^^^^^^
+General options
+^^^^^^^^^^^^^^^
 
 .. csv-table::
    :header: "Name", "Required", "Inheritable", "Type"
@@ -151,15 +151,15 @@ is shown, as well as an explanation for each option.
 
 **name**
 
-   The tokenizer's name, used at some error messages to clarify
+   The tokenizer's name is used at some error messages to clarify
    what tokenizer has failed. The default value of this option
    is ``'default'``.
 
    .. note::
 
-      It is recommended to specify tokenizers' name using the format
+      It is recommended to specify the tokenizers' name using the format
       ``<name_language>-tokenizer`` where ``name_language`` is the
-      human-readable programming's language name.
+      human-readable programming language name.
 
 **extension**
 
@@ -173,7 +173,7 @@ is shown, as well as an explanation for each option.
 
    By default, extensions are ignored, so it is not necessary to
    declare this option if you want to allow any kind of file.
-   However, you can put it's default value, which is ``'no-ext'``.
+   However, you can put its default value, which is ``'no-ext'``.
    For example::
 
       {
@@ -184,20 +184,20 @@ is shown, as well as an explanation for each option.
 
    If true, options and rules would be checked before tokenizing.
    It is recommended to set this option to false to improve the
-   performance of the tokenizer. Default value is ``'true'``.
+   performance of the tokenizer. The default value is ``'true'``.
 
 **inherit_rules**
 
    The relative path of another tokenizer rules file which will be
-   inherited at current one. Take into account that ``.json`` must
+   inherited at the current one. Take into account that ``.json`` must
    not be included. For example::
 
       {
          "inherit_rules": "rules/c_tokenizer_rules"
       }
 
-   By default, inheritance would consider new states and rules,
-   as well as repeated states which has new rules. Besides, some
+   By default, the inheritance would consider new states and rules,
+   as well as repeated states which have new rules. Besides, some
    options such as ``override_tokens``, would be inherited
    following the same restrictions explained before.
 
@@ -278,8 +278,8 @@ is shown, as well as an explanation for each option.
       All tokenizer rules file must always have a special state named as ``start``.
       This state will be processed first, so search starts here.
 
-2.4.2. Rule Options
-^^^^^^^^^^^^^^^^^^^
+Rule options
+^^^^^^^^^^^^
 
 .. csv-table::
    :header: "Name", "Required", "Inheritable", "Type"
@@ -291,14 +291,14 @@ is shown, as well as an explanation for each option.
 
 **token**
 
-   The token's name of a rule. This option must be one of the available tokens' name.
+   The token's name of a rule. This option must be one of the available tokens' names.
    To see the complete list of names, go
    `here <https://github.com/losedavidpb/moodle-mod_vpl/blob/v3.5.0%2B%2B/classes/tokenizer/tokenizer.php>`_.
 
    .. note::
 
-      Special tokens such as ``default_token`` could not declared next to ``token``,
-      but is necessary to include ``regex`` if ``token`` is defined.
+      Special tokens such as ``default_token`` could not be declared next to the ``token``,
+      but is necessary to include ``regex`` if the ``token`` is defined.
 
 **regex**
 
@@ -321,8 +321,8 @@ is shown, as well as an explanation for each option.
 
 **default_token**
 
-   The token's name for next state. ``default_token`` is used to consider cases
-   on which any rules has not match but it is known the type of the token. For
+   The token's name for the next state. ``default_token`` is used to consider cases
+   in which any rules has not match but it is known the type of the token. For
    example::
 
       {
@@ -359,10 +359,10 @@ is shown, as well as an explanation for each option.
 **next**
 
    The next state to search for next token. This option would be used whether
-   regex matches or current rule has only defined ``next``.
+   regex matches or the current rule has only defined ``next``.
 
-2.5. Example of Use
--------------------
+Example of use
+--------------
 
 This subsection shows an example of a tokenizer rules file with
 some of the options explained.
@@ -445,10 +445,10 @@ some of the options explained.
       }
    }
 
-2.6. Contribute
----------------
+Contribute
+----------
 
-If you want include new programming languages, or contribute
-to existed ones, please contact to Juan Carlos Rodriguez-del-Pino
-by the mail jc.rodriguezdelpino@ulpgc.es, or to David Parreño Barbuzano
-using the mail losedavidpb@gmail.com
+If you want to include new programming languages, or contribute
+to existing ones, please contact to Juan Carlos Rodriguez-del-Pino
+by the email jc.rodriguezdelpino@ulpgc.es, or to David Parreño Barbuzano
+using the email losedavidpb@gmail.com

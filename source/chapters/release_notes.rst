@@ -1,8 +1,8 @@
-4. Release notes
+Release notes
 ================
 
-This chapter includes a completed documentation of all notable
-changes that has been maded during the development of VPL Tokenizer.
+This chapter includes the documentation of all notable changes
+that have been made during the development of VPL Tokenizer.
 
 The format is based on `Keep a Changelog <https://keepachangelog.com/en/1.0.0/>`_,
 and this project adheres to `Semantic Versioning <https://semver.org/spec/v2.0.0.html>`_.
@@ -11,7 +11,7 @@ VPLT 4.0.1
 ----------
 
 This is a small release with some fixes for similarity and tokenizer factory classes.
-PHPUnit tests for mentioned classes have also be refactored to reduce complexity.
+PHPUnit tests for mentioned classes have also been refactored to reduce complexity.
 
 VPLT 4.0.0
 ----------
@@ -19,30 +19,30 @@ VPLT 4.0.0
 Added
 ~~~~~
 
-* Include a class factory for similarity search that considers old and new tokenizers
-* Include a generic similarity class to include new tokenizers without a specific similarity class
-* Define the option ``max_token_count`` to update maximum number of tokens
-* Add one scenario for some programming languages at Behat tests
+* Includes a class factory for similarity search that considers old and new tokenizers
+* Includes a generic similarity class to include new tokenizers without a specific similarity class
+* Defines the option ``max_token_count`` to update the maximum number of tokens
+* Adds one scenario for some programming languages at Behat tests
 
 Changed
 ~~~~~~~
 
-* Replace the prefix ``_highlight_rules`` used at JSON files with rules to ``_tokenizer_rules``
-* Now all rules are stored at ``tokenizer_rules`` directory instead of ``highlight_rules``
+* Replace the prefix ``_highlight_rules`` used in JSON files with rules to ``_tokenizer_rules``
+* Now all rules are stored in ``tokenizer_rules`` directory instead of ``highlight_rules``
 * Refactor C++ tokenizer rules file to inherit C rules
 
 Fixed
 ~~~~~
 
-* Improve performance at Behat tests when VPL activity is initializing
-* Fix inheritance operation to also consider overrided tokens
-* Fix some errors at all tokenizer rules files
+* Improves performance at Behat tests when VPL activity is initializing
+* Fixes inheritance operation to also consider overridden tokens
+* Fixes some errors in all tokenizer rules files
 
 VPLT 3.3.1
 ----------
 
 This is a bug fix release of VPLT 3.3.0 that includes some internal
-changes used by developers to facilitate the detection of errors at
+changes used by developers to facilitate the detection of errors in
 JSON files with rules.
 
 VPLT 3.3.0
@@ -51,29 +51,29 @@ VPLT 3.3.0
 Added
 ~~~~~
 
-* Include NULL value ``vpl_null`` as a raw VPL type for tokens' names
-* Include C++ and Scheme JSON files with rules
-* Include Behat tests for similarity for some tokenizers
+* Includes NULL value ``vpl_null`` as a raw VPL type for tokens' names
+* Includes C++ and Scheme JSON files with rules
+* Includes Behat tests for similarity for some tokenizers
 
 Fixed
 ~~~~~
 
-* Fix and improve Java, Ada, and Fortran tokenizer rules
-* Fix ``override_tokens`` to avoid the redefinition of raw VPL types
-* Fix ``check_rules`` to consider extension, name, and override_tokens
-* Fix initialization for ``override_tokens`` option
-* Fix general errors to improve coverage value
+* Fixes and improve Java, Ada, and Fortran tokenizer rules
+* Fixes ``override_tokens`` to avoid the redefinition of raw VPL types
+* Fixes ``check_rules`` to consider the extension, name, and override_tokens
+* Fixes initialization for ``override_tokens`` option
+* Fixes general errors to improve coverage value
 
 VPLT 3.2.1
 ----------
 
 This is a small release with some bug fixes and support for C.
-The changes are docummented at the following list.
+The changes are documented at the following list.
 
-* Include a JSON file with rules for C programming language
-* Provide support for Moodle 3.4.0 with PHP 7.3.0
-* Set compatibility between old and new tokenizers
-* Fix tokenizer factory class to consider old tokenizers
+* Includes a JSON file with rules for the C programming language
+* Provides support for Moodle 3.4.0 with PHP 7.3.0
+* Sets compatibility between old and new tokenizers
+* Fixes tokenizer factory class to consider old tokenizers
 
 VPLT 3.2.0
 ----------
@@ -81,14 +81,14 @@ VPLT 3.2.0
 Added
 ~~~~~
 
-* Include a factory class to create tokenizers
-* Add ``override_tokens`` option to add/update tokens' names
+* Includes a factory class to create tokenizers
+* Adds ``override_tokens`` option to add/update tokens' names
 
 Fixed
 ~~~~~
 
-* Fix verbosity for error messages for tokenizer
-* Fix parse operation to be compatible with similarity search
+* Fixes verbosity for error messages for tokenizer
+* Fixse parse operation to be compatible with similarity search
 
 VPLT 3.1.1
 ----------
@@ -96,17 +96,17 @@ VPLT 3.1.1
 Added
 ~~~~~
 
-* Include an internal method to update maximum number of tokens
+* Includes an internal method to update the maximum number of tokens
 * Internal option to disable verbosity for error messages
 
 Fixed
 ~~~~~
 
-* Improve test cases to have a great code coverage
-* Fix parse operation for cases with overflow tokens
-* Fix tokenizer to truly consider capturing groups
-* Fix parse operation to ignore empty or unexisted tokens
-* Fix errors related to pattern regerence at token's regex
+* Improves test cases to have a great code coverage
+* Fixes parse operation for cases with overflow tokens
+* Fixes tokenizer to truly consider capturing groups
+* Fixes parse operation to ignore empty or unexisted tokens
+* Fixes errors related to pattern regerence at token's regex
 
 VPLT 3.1.0
 ----------
@@ -114,8 +114,8 @@ VPLT 3.1.0
 Added
 ~~~~~
 
-* Include JSON file with rules for Fortran
-* Include coberture compatibility for VPL plugin
+* Includes JSON file with rules for Fortran
+* Includes coberture compatibility for VPL plugin
 
 Changed
 ~~~~~~~
@@ -125,8 +125,8 @@ Changed
 Fixed
 ~~~~~
 
-* Fix rules file of Java programming language
-* Fix initialization to truly use rule's regex
+* Fixes rules file of Java programming language
+* Fixes initialization to truly use rule's regex
 
 VPLT 3.0.1
 ----------
@@ -140,7 +140,7 @@ VPLT 3.0.0
 This is an important release which includes some bug fixes and
 important changes related to the structure of a JSON file with rules.
 
-New Structure
+New structure
 ~~~~~~~~~~~~~
 
 The main structure of a JSON file with rules has been updated to be
@@ -166,7 +166,7 @@ tokenizer, since there are less options to check.
 Fixed
 ~~~~~
 
-* Fix codestyle for PHPUnit tests
+* Fixes codestyle for PHPUnit tests
 * Small fixes at tokenizer's initialization
 
 VPLT 2.1.2
@@ -177,13 +177,13 @@ Changed
 
 * Now ``token`` must be one of the available predefined tokens
 * All JSON files with rules must always contain ``start`` state
-* Set default value for ``extension`` to ``no-ext``
+* Sets default value for ``extension`` to ``no-ext``
 
 Fixed
 ~~~~~
 
-* Fix syntax checker for ``extension`` option
-* Fix inheritance operation to consider repeated states
+* Fixes syntax checker for ``extension`` option
+* Fixes inheritance operation to consider repeated states
 
 VPLT 2.1.1
 ----------
@@ -203,8 +203,8 @@ Added
 Fixed
 ~~~~~
 
-* Improve performance deleting unused data when if possible
-* Refactor initialization to improve performance
+* Improves performance deleting unused data when if possible
+* Refactors initialization to improve performance
 
 VPLT 2.0.0
 ----------
@@ -271,6 +271,6 @@ Changed
 
 * Tokenization could be done for an entire file or for a line of it
 * Ada and Java now include compatibility with new tokenizer
-* Include verbosity for errors and exceptions
-* Specify data type at variables for security reasons
-* Upgrade VPL to version 3.5.0+ to use Moodle 4.0
+* Includes verbosity for errors and exceptions
+* Specifies data type at variables for security reasons
+* Upgrades VPL to version 3.5.0+ to use Moodle 4.0

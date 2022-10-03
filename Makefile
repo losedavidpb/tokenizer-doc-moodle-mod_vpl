@@ -17,7 +17,7 @@
 # Makefile for VPL Tokenizer Documentation        #
 #                                                 #
 #	@author 	- David Parreño Barbuzano         #
-#	@contact	- david.parreno101@alu.ulpgc.es   #
+#	@contact	- losedavidpb@gmail.com   		  #
 #	@source  	- Sphinx Documentation            #
 ###################################################
 

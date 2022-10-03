@@ -20,3 +20,8 @@ indent_size = 4
 [*.rst]
 indent_style = space
 indent_size = 3
+
+# HTML
+[*.html]
+indent_style = tab
+indent_size = 4

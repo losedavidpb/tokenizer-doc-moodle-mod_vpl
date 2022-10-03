@@ -9,13 +9,13 @@
 import sphinx_rtd_theme
 
 # The documented project’s name.
-project = 'Virtual Programming Lab for Moodle (VPL) Tokenizer'
+project = 'VPLT - The Virtual Programming Lab Tokenizer'
 
 # The author name(s) of the document. The default value is 'unknown'.
 author = 'David Parreño Barbuzano'
 
 # A copyright statement in the style '2008, Author Name'.
-copyright = '2022, ' + author
+copyright = '2022 - 2023, ' + author
 
 # An alias of copyright.
 project_copyright = copyright
@@ -34,7 +34,17 @@ release = '3.5.0++ - 4.0.1'
 
 # A list of strings that are module names of extensions.
 # These can be extensions coming with Sphinx (named sphinx.ext.*) or custom ones.
-extensions = []
+extensions = [
+    'sphinx.ext.autodoc',
+    'sphinx.ext.doctest',
+    'sphinx.ext.intersphinx',
+    'sphinx.ext.todo',
+    'sphinx.ext.coverage',
+    'sphinx.ext.mathjax',
+    'sphinx.ext.ifconfig',
+    'sphinx.ext.viewcode',
+    'sphinx.ext.githubpages'
+]
 
 # The file extensions of source files. Sphinx considers the files with this suffix as sources.
 # The value can be a dictionary mapping file extensions to file types.
@@ -50,10 +60,10 @@ source_encoding = 'utf-8-sig'
 
 # The document name of the “root” document, that is, the document
 # that contains the root toctree directive. Default is 'index'.
-#root_doc = 'index'
+root_doc = 'index'
 
 # Same as root_doc.
-#master_doc = root_doc
+master_doc = 'index'
 
 # A list of glob-style patterns [1] that should be excluded when looking for source files.
 # They are matched against the source file names relative to the source directory, using
@@ -69,9 +79,10 @@ source_encoding = 'utf-8-sig'
 # A list of paths that contain extra templates (or templates that overwrite
 # builtin/theme-specific templates). Relative paths are taken as relative to
 # the configuration directory.
-templates_path = ['_templates']
+templates_path = ['templates']
 
 # A string of reStructuredText that will be included at the end of every source file that is read.
+
 rst_epilog = """
 For more details about VPL, visit the `VPL home page <https://vpl.dis.ulpgc.es/>`_ or the
 `VPL plugin page at Moodle. <https://moodle.org/plugins/mod_vpl>`_
@@ -112,17 +123,17 @@ html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 # If given, this must be the name of an image file (path relative to the configuration directory) that is
 # the logo of the docs, or URL that points an image file for the logo. It is placed at the top of the sidebar;
 # its width should therefore not exceed 200 pixels. Default: None.
-html_logo = '_static/logo.png'
+html_logo = 'images/logo.png'
 
 # If given, this must be the name of an image file (path relative to the configuration directory) that is the favicon
 # of the docs, or URL that points an image file for the favicon. Modern browsers use this as the icon for tabs, windows
 # and bookmarks. It should be a Windows-style icon file (.ico), which is 16x16 or 32x32 pixels large. Default: None.
-html_favicon = '_static/favicon.ico'
+html_favicon = 'images/favicon.ico'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
+html_static_path = ['images']
 
 # If true (and html_copy_source is true as well), links to the reST sources will be added to the sidebar. The default is True.
 html_show_sourcelink = False

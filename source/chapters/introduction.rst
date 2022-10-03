@@ -1,39 +1,39 @@
-1. Introduction
-===============
+Introduction
+============
 
 The Virtual Programming Lab for Moodle (VPL) Tokenizer (VPLT) is a tool of VPL
 to generate lexical analyzers for programming languages in an easy way.
-VPLT is licenced under `GNU GPL3`_.
+VPLT is licensed under `GNU GPL3`_.
 
 .. _GNU GPL3: https://www.gnu.org/licenses/gpl-3.0-standalone.html
 
 Its main features are:
 
-* Compatibility with similarity search feature
+* Compatibility with the similarity search feature of VPL
 * Interface to include lexical analyzers
 * Support for old VPL tokenizers
 * Easy and quick customization
 
 This program is based on the tokenizer of the `Ace Editor <https://ace.c9.io/>`_.
-If you are interested, here there is a `link`_ of the source file of Ace with
+If you are interested, here there is a `link`_ to the source file of Ace with
 the implementation of the tokenizer.
 
 .. _link: https://github.com/ajaxorg/ace/blob/master/lib/ace/tokenizer.js
 
-1.1. Objectives
----------------
+Objectives
+----------
 
 Before VPL Tokenizer, the lexical analyzers used at VPL for similarity search
 were based on specific automata for each programming language. This was a big
-limitation for scalability, since developers have to spend a lot of time and
-effort to just include support for a single language.
+handicap, since developers have to spend a lot of time and effort to just include
+support for a single language.
 
-The main objective of VPLT is to provide to teachers and developers a simpler
-and more realiable way to create lexical analyzers with just the creation of
+The main objective of VPLT is to provide teachers and developers with a simpler
+and more reliable way to create lexical analyzers with just the creation of
 a JSON file that contains a set of rules and states for the automata.
 
-1.2. Requirements
------------------
+Requirements
+------------
 
 To use VPL Tokenizer with the expected functionality, you must install
 VPL fulfilling the following requirements:
@@ -46,21 +46,21 @@ For more information about VPL installation, go to the official `VPL manual`_.
 
 .. _VPL manual: https://vpl.dis.ulpgc.es/documentation/vpl-3.4.3+/installation.html#requirements
 
-1.3. Limitations
-----------------
+Limitations
+-----------
 
 Before using VPL Tokenizer, you must consider the following limitations:
 
 * It is not possible to define anonymous rules or states
-* Tokenizers' name must follow the format ``<namelang>-tokenizer``
-* There is any way to ignore states or rules during inheritance
-* It could happen that a tokenizer provokes an infinite loop
+* Tokenizers' names must follow the format ``<namelang>-tokenizer``
+* There is no way to ignore states or rules during inheritance
+* It could happen that a badly defined tokenizer provokes an infinite loop
 
-1.4. Other uses
----------------
+Other uses
+----------
 
 Although VPL Tokenizer is mainly intended for similarity search, it could have
-other uses. Here is a list with some of those uses.
+other uses. Here is a list of some of those uses.
 
 * To generate the lexer of a compiler
 * Syntax highlighting for code editors
