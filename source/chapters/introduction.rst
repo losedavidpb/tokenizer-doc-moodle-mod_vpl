@@ -14,11 +14,11 @@ Its main features are:
 * Support for old VPL tokenizers
 * Easy and quick customization
 
-This program is based on the tokenizer of the `Ace Editor <https://ace.c9.io/>`_.
-If you are interested, here there is a `link`_ to the source file of Ace with
+This program is based on the tokenizer of the `Ace editor <https://ace.c9.io/>`_.
+If you are interested, here there is a `link`_ to the repository of Ace with
 the implementation of the tokenizer.
 
-.. _link: https://github.com/ajaxorg/ace/blob/master/lib/ace/tokenizer.js
+.. _link: https://github.com/ajaxorg/ace
 
 Objectives
 ----------

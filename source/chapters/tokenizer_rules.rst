@@ -1,14 +1,14 @@
 Tokenizer rules
 ===============
 
-This chapter is intended for teachers who want to include at **VPL Tokenizer** new programming languages
+This chapter is intended for teachers who want to include at VPL Tokenizer new programming languages
 or edit the existing ones. Teachers here will see how to create or edit tokenizer rules files and how to
-add them to the **VPL module**.
+add them to the VPL module.
 
 Introduction
 ------------
 
-**VPL Tokenizer** generates lexical analyzers by a list of rules stored in a JSON file.
+VPL Tokenizer generates lexical analyzers by a list of rules stored in a JSON file.
 These files are called *tokenizer rules files*, and provide teachers an interface to
 define the way tokenizers would understand each token.
 
@@ -225,7 +225,7 @@ General options
       }
 
    To see the full list of existed tokens' names, click
-   `here <https://github.com/losedavidpb/moodle-mod_vpl/blob/v3.5.0%2B%2B/classes/tokenizer/tokenizer.php>`_.
+   `here <appendices/available_tokens.html>`_.
 
    .. note::
 
@@ -292,8 +292,8 @@ Rule options
 **token**
 
    The token's name of a rule. This option must be one of the available tokens' names.
-   To see the complete list of names, go
-   `here <https://github.com/losedavidpb/moodle-mod_vpl/blob/v3.5.0%2B%2B/classes/tokenizer/tokenizer.php>`_.
+   To see the complete list of names, go to the
+   `appendix A <appendices/available_tokens.html>`_ of this manual.
 
    .. note::
 

@@ -15,10 +15,10 @@ The steps that must be covered for this conversion are:
 .. note::
 
    Each of the steps that are explained here follows an example for the
-   Ada programming language. The file from Ace used here can be visited
-   at `this link`_.
+   Ada programming language. The file from Ace used here was extracted
+   from `this link`_.
 
-.. _this link: https://github.com/ajaxorg/ace/blob/master/src/mode/ada_highlight_rules.js
+.. _this link: https://github.com/ajaxorg/ace
 
 Step 1. Creating the VPLT file
 ------------------------------
